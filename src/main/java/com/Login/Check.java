@@ -22,6 +22,15 @@ public class Check {
 		}
 	return false;
 	}
+	public static boolean isMobileThere2(long num)
+	{
+		UserDTO dbUser=em.find(UserDTO.class, num);
+		if(dbUser.getMobile_num()==num)
+		{
+			return true;
+		}
+	return false;
+	}
 	
 	public static boolean isGmailThere(String gmail,long num)
 	{
