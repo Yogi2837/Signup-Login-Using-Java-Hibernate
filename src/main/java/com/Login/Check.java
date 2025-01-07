@@ -42,5 +42,14 @@ public class Check {
 		}
 	return false;	
 	}
+	public static boolean isPasswordThere2(String password,long num)
+	{
+		UserDTO dbUser=em.find(UserDTO.class, num);
+		if(dbUser.getPassword().equals(password))
+		{
+			return true;
+		}
+	return false;	
+	}
 
 }
